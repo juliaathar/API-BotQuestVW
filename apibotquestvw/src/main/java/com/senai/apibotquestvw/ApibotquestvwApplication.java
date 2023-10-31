@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ApibotquestvwApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(ApibotquestvwApplication.class, args);
 	}
 
