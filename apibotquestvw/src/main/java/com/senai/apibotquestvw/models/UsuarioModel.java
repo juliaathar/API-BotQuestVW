@@ -29,6 +29,6 @@ public class UsuarioModel implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "id_chapa", referencedColumnName = "id")
-    private UsuarioModel chapa;
+    private ChapaModel chapa;
 
 }
