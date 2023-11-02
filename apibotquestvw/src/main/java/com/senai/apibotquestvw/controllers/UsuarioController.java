@@ -41,8 +41,8 @@ public class UsuarioController {
 
     }
 
-    @PostMapping(consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
-    public ResponseEntity<Object> cadastrarUsuario(@ModelAttribute @Valid UsuarioDto usuarioDto) {
+    @PostMapping
+    public ResponseEntity<Object> cadastrarUsuario(@RequestBody @Valid UsuarioDto usuarioDto) {
         if (usuarioRepository.findByEmail(usuarioDto.email()) != null) {
             //não pode cadastrar
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Esse email já está cadastrado");

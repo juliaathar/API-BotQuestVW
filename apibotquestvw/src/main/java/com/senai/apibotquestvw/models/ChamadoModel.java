@@ -26,7 +26,7 @@ public class ChamadoModel implements Serializable {
 
     Date dataChamado;
 
-    Boolean status;
+    String status;
 
     @ManyToOne
     @JoinColumn(name = "id_usuario", referencedColumnName = "id")
