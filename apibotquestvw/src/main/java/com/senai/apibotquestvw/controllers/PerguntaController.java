@@ -44,7 +44,7 @@ public class PerguntaController {
 
     @DeleteMapping("/{idPergunta}")
     public ResponseEntity<Object> deletarPergunta(@PathVariable(value = "idPergunta") UUID id) {
-        Optional<PerguntaModel> perguntaBuscada = Optional.ofNullable(perguntaRepository.findById(id));
+        Optional<PerguntaModel> perguntaBuscada = (perguntaRepository.findById(id));
 
         if (perguntaBuscada.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Pergunta não encontrada");
